@@ -1,1 +1,7 @@
-
+body {
+    background-color: cadetblue;
+}
+p {
+    text-align: center;
+    color: white;
+}
