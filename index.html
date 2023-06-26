@@ -9,8 +9,19 @@
 <body>
     <h1 style="text-align: center; color:red;">MicroSoftware Check update server</h1>
     <p class="last">Last version available: <span class="version">MicroSoftware 5.15.0v Ultimate</span></p>
+    <button onclick="redirect()" class="sys">Home page</button>
     <p class="d">© Copyright 2022-2023 Informatic365</p>
     <style>
+        .sys {
+            text-align: center;
+            padding: 5px 15px;
+            border-radius: 25px;
+            background-color: deepskyblue;
+            border-color: black;
+            color: white;
+            display: inline-block;
+            margin: 25px;
+        }
         .last {
             color: black;
             text-align: center;
@@ -23,8 +34,37 @@
             bottom: 0;
             left: 0;
             margin: 10px;
-            font-size: 7px;
+            font-size: 12.2px;
         }
     </style>
+    <script>
+        function redirect_en() {
+            var warning = confirm("Do you want to continue redirecting?")
+            if (warning) {
+                window.location.replace("https://www.informatica365.tk")
+            } else {
+                alert("Redirection cancelled.")
+            }
+        };
+        function redirect_it () {
+            var attenzione = confirm("Vuoi continuare il reindirizzamento?")
+            if (attenzione) {
+                window.location.replace("https://www.informatica365.tk")
+            } else {
+                alert("Reindirizzamento annullato.")
+            }
+        };
+        function redirect() {
+            var lingua = navigator.language || navigator.userLanguage;
+
+            if (lingua === "it-IT" || lingua === "it") {
+                // Lingua italiana
+                redirect_it();
+            } else {
+                // Altre lingue (presumibilmente inglese)
+                redirect_en();
+            };
+        } 
+    </script>
 </body>
 </html>
