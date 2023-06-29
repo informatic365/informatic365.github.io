@@ -89,16 +89,120 @@
     }
   </style>
   <div class="bar">
-    <img src="static/src/server.svg" alt="Error", class="img-resizer">
+    <img src="static/src/server.svg" alt="Error" class="img-resizer">
   </div>
   <div class="frame">
-    <h3 style="margin-left: 50px; color: black; margin-top: 75px; font-size: 25px;">Server Error</h3>
-    <h1 style="color: rgb(255, 136, 0); font-size: 90px; margin-left: 50px; margin-top: 0%;">404</h1>
-    <h2 style="font-size: 19px; margin-left: 50px; margin-top: 0px;">Page not found error.</h2>
+    <h3 style="margin-left: 50px; color: black; margin-top: 75px; font-size: 25px;"></h3>
+    <h1 style="color: rgb(255, 136, 0); font-size: 90px; margin-left: 50px; margin-top: 0%;"></h1>
+    <h2 style="font-size: 19px; margin-left: 50px; margin-top: 0px;"></h2>
     <hr style="border: 1px solid gray; width: 95%;">
-    <button class="reloader" onclick="window.location.reload()">Reload Page</button>
-    <button class="back_button" onclick="history.back()">Back to Previous Page</button>
-    <a class="home-button" href="/">Home Page</a>
+    <button class="reloader" onclick="window.location.reload()"></button>
+    <button class="back_button" onclick="history.back()"></button>
+    <a class="home-button" href="/"></a>
   </div>
+  <script>
+    function getBrowserLanguage() {
+      var language = navigator.language || navigator.userLanguage || '';
+      return language.toLowerCase();
+    }
+
+    function translateMessage() {
+      var language = getBrowserLanguage();
+      var pageTitle = document.querySelector("title");
+      var serverErrorText = document.querySelector(".frame h3");
+      var errorNumberText = document.querySelector(".frame h1");
+      var errorDescriptionText = document.querySelector(".frame h2");
+      var reloadButton = document.querySelector(".reloader");
+      var backButton = document.querySelector(".back_button");
+      var homeButton = document.querySelector(".home-button");
+
+      if (pageTitle !== null) {
+        if (language.startsWith("it")) {
+          // Italiano
+          pageTitle.innerText = "Errore 404 - Informatic365";
+          serverErrorText.innerText = "Errore del server";
+          errorNumberText.innerText = "404";
+          errorDescriptionText.innerText = "Pagina non trovata.";
+          reloadButton.innerText = "Ricarica la Pagina";
+          backButton.innerText = "Torna alla Pagina Precedente";
+          homeButton.innerText = "Pagina Principale";
+        } else if (language.startsWith("es")) {
+          // Spagnolo
+          pageTitle.innerText = "Error 404 - Informatic365";
+          serverErrorText.innerText = "Error del servidor";
+          errorNumberText.innerText = "404";
+          errorDescriptionText.innerText = "Error de página no encontrada.";
+          reloadButton.innerText = "Recargar Página";
+          backButton.innerText = "Volver a la Página Anterior";
+          homeButton.innerText = "Página Principal";
+        } else if (language.startsWith("zh")) {
+          // Cinese
+          pageTitle.innerText = "Error 404 - Informatic365";
+          serverErrorText.innerText = "服务器错误";
+          errorNumberText.innerText = "404";
+          errorDescriptionText.innerText = "找不到页面错误。";
+          reloadButton.innerText = "重新加载页面";
+          backButton.innerText = "返回上一页";
+          homeButton.innerText = "主页";
+        } else if (language.startsWith("fr")) {
+          // Francese
+          pageTitle.innerText = "Erreur 404 - Informatic365";
+          serverErrorText.innerText = "Erreur du serveur";
+          errorNumberText.innerText = "404";
+          errorDescriptionText.innerText = "Erreur de page non trouvée.";
+          reloadButton.innerText = "Recharger la Page";
+          backButton.innerText = "Retour à la Page Précédente";
+          homeButton.innerText = "Page d'Accueil";
+        } else if (language.startsWith("de")) {
+          // Tedesco
+          pageTitle.innerText = "Fehler 404 - Informatic365";
+          serverErrorText.innerText = "Serverfehler";
+          errorNumberText.innerText = "404";
+          errorDescriptionText.innerText = "Seite nicht gefunden.";
+          reloadButton.innerText = "Seite neu laden";
+          backButton.innerText = "Zurück zur vorherigen Seite";
+          homeButton.innerText = "Startseite";
+        } else if (language.startsWith("ru")) {
+          // Russo
+          pageTitle.innerText = "Ошибка 404 - Informatic365";
+          serverErrorText.innerText = "Ошибка сервера";
+          errorNumberText.innerText = "404";
+          errorDescriptionText.innerText = "Страница не найдена.";
+          reloadButton.innerText = "Перезагрузить страницу";
+          backButton.innerText = "Назад к предыдущей странице";
+          homeButton.innerText = "Главная страница";
+        } else if (language.startsWith("pt")) {
+          // Portoghese
+          pageTitle.innerText = "Erro 404 - Informatic365";
+          serverErrorText.innerText = "Erro do servidor";
+          errorNumberText.innerText = "404";
+          errorDescriptionText.innerText = "Erro de página não encontrada.";
+          reloadButton.innerText = "Recarregar Página";
+          backButton.innerText = "Voltar para a Página Anterior";
+          homeButton.innerText = "Página Inicial";
+        } else if (language.startsWith("ro")) {
+          // Rumeno
+          pageTitle.innerText = "Eroare 404 - Informatic365";
+          serverErrorText.innerText = "Eroare de server";
+          errorNumberText.innerText = "404";
+          errorDescriptionText.innerText = "Eroare: pagină negăsită.";
+          reloadButton.innerText = "Reîncarcă Pagina";
+          backButton.innerText = "Înapoi la Pagina Anterioară";
+          homeButton.innerText = "Pagina Principală";
+        } else {
+          // Altre lingue o inglese
+          pageTitle.innerText = "Error 404 - Informatic365";
+          serverErrorText.innerText = "Server Error";
+          errorNumberText.innerText = "404";
+          errorDescriptionText.innerText = "Page not found error.";
+          reloadButton.innerText = "Reload Page";
+          backButton.innerText = "Back to Previous Page";
+          homeButton.innerText = "Home Page";
+        }
+      }
+    }
+
+    translateMessage();
+  </script>
 </body>
 </html>
