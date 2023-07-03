@@ -5,39 +5,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informatic365 - Home</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <h1 style="text-align: center; color:red;">MicroSoftware Check update server</h1>
-    <p class="last">Last version available: <span class="version">MicroSoftware 5.15.0v Ultimate</span></p>
-    <button onclick="redirect()" class="sys">Home page</button>
-    <p class="d">© Copyright 2022-2023 Informatic365</p>
+    <div class="root">
+        <div class="main">
+            <div class="home-bar">
+                <a href="/" class="logo-1">
+                    <img src="favicon.ico" alt="" srcset="" class="img-set">
+                    <span style="position: absolute; font-size: 20px; top: 15px; margin-left: 5px;">Informatic365</span>
+                </a>
+                <a href="https://www.informatica365.tk" class="b1">Website</a>
+                <hr style="border: 1px solid gray; width: 98%; background-color: white;">
+            </div>
+            <div class="main2">
+
+            </div>
+        </div>
+    </div>
     <style>
-        .sys {
-            text-align: center;
-            padding: 5px 15px;
-            border-radius: 25px;
-            background-color: deepskyblue;
-            border-color: black;
-            color: white;
-            display: inline-block;
-            margin: 25px;
+        .main2 {
+            background-color: white;
+            width: 100%;
+            height: 600px;
         }
-        .sys:hover {
-            background-color: rgb(4, 172, 228);
-        }
-        .last {
+        .logo-1 {
+            transition: 0.75s;
             color: black;
-            text-align: center;
         }
-        .version {
-            color: rgb(0, 162, 255);
+        .logo-1:hover {
+            transition: 0.75s;
+            color: rgb(138, 138, 138);
         }
-        .d {
+        .b1 {
+            transition: 0.75s;
             position: absolute;
-            bottom: 0;
-            left: 0;
-            margin: 10px;
-            font-size: 12.2px;
+            left: 37%;
+            text-decoration: none;
+            color: black;
+            border: 1px solid black;
+            padding: 11.5px;
+        }
+        .b1:hover {
+            transition: 0.75s;
+            color: white;
+            background-color: black;
+        }
+        .img-set {
+            width: 90px;
+            height: 100%;
+            margin-left: 1%;
+        }
+        body {
+            margin: 0;
+        }
+        
+        .root {
+            overflow-y: scroll;
+            scrollbar-width: thin;
+            scrollbar-color: #888888 #dddddd;
+            height: 100vh;
+        }
+        
+        .root::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .root::-webkit-scrollbar-thumb {
+            background-color: #888888;
+            border-radius: 10px;
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .root::-webkit-scrollbar-thumb:hover {
+            background-color: #555555;
+        }
+        
+        .root::-webkit-scrollbar-track {
+            background-color: #dddddd;
+        }
+        
+        .main {
+            height: 200%;
+            background-color: darkslategrey;
+        }
+        
+        .home-bar {
+            position: fixed;
+            width: 100%;
+            height: 50px;
+            background-color: white;
         }
     </style>
     <script>
