@@ -13,6 +13,6 @@ Welcome to Informatic365's official GitHub page.
 # Projects Documentation
 - [MicroSoftware](https://www.informatica365.tk/projects/microsoftware)
 - [SmartSoft - Not Available on this moment]()
-- [YTDownloader](https://www.informatica365.tk/projects/ytdownloader)
+- [YTDownloader - bug unfixed](https://www.informatica365.tk/projects/ytdownloader)
 - [MicroChat - bug unfixed]()
 - [PySmart365](https://github.com/informatic365/PySmart365)
